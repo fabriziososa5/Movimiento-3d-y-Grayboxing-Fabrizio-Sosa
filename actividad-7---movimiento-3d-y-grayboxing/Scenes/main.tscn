@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://covfwngm56g8q"]
+
+[ext_resource type="PackedScene" uid="uid://csyfm56s66hfk" path="res://Scenes/escenario.tscn" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://24wsis31jvu6" path="res://Scenes/player.tscn" id="2_8gbba"]
+
+[sub_resource type="Environment" id="Environment_7u77a"]
+
+[node name="Main" type="Node3D" unique_id=330303111]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=705543489]
+environment = SubResource("Environment_7u77a")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1608450296]
+transform = Transform3D(1, 0, 0, 0, 0.64278764, 0.76604444, 0, -0.76604444, 0.64278764, 1.3486807, 6.1792727, 0)
+
+[node name="Escenario" parent="." unique_id=2056569040 instance=ExtResource("1_bo1nx")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="Player" parent="." unique_id=646716945 instance=ExtResource("2_8gbba")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.8171024, 1.8502746, 6.241575)
