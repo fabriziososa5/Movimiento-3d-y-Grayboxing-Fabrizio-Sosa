@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://covfwngm56g8q"]
 
 [ext_resource type="PackedScene" uid="uid://csyfm56s66hfk" path="res://Scenes/escenario.tscn" id="1_bo1nx"]
+[ext_resource type="Script" uid="uid://fkwpga4dmy4j" path="res://Scripts/main.gd" id="1_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://24wsis31jvu6" path="res://Scenes/player.tscn" id="2_8gbba"]
 [ext_resource type="Script" uid="uid://dj7k45gbcnis" path="res://Scripts/spot_light_3d.gd" id="3_8gbba"]
 
@@ -9,6 +10,7 @@ background_energy_multiplier = 0.25
 ambient_light_energy = 16.0
 
 [node name="Main" type="Node3D" unique_id=330303111]
+script = ExtResource("1_jjvhh")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=705543489]
 environment = SubResource("Environment_7u77a")
@@ -21,6 +23,28 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0
 
 [node name="Player" parent="." unique_id=646716945 instance=ExtResource("2_8gbba")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.8171024, 1.8502746, 6.241575)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=229810113]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1443828577]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -201.0
+offset_right = 66.0
+offset_bottom = -178.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+text = "INTERACTÚAR (E)"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1175234169]
 transform = Transform3D(1, 0, 0, 0, -0.10157719, 0.9948277, 0, -0.9948277, -0.10157719, -1.5389163, 5.066181, -2.9368157)

@@ -23,6 +23,7 @@ var puede_agarrarse := true
 
 @onready var camara = $RayCast3D/Camera3D
 @onready var colision = $CollisionShape3D
+@onready var mensaje: Label = get_parent().get_node("CanvasLayer/Label")
 
 var agachado := false
 
@@ -30,6 +31,7 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	posicion_camara_original = camara.position
 
+	print("LABEL ENCONTRADO: ", mensaje)
 
 func _input(event):
 	if event is InputEventKey:
@@ -62,7 +64,7 @@ func cambiar_agachado(valor: bool):
 		capsule.height = altura_normal
 		camara.position.y = altura_camara_normal
 
-func mover_escalera(delta):
+func mover_escalera(_delta):
 	velocity.x = 0
 	velocity.z = 0
 	velocity.y = 0
@@ -90,6 +92,12 @@ func subir_borde():
 	borde_actual = null
 
 	print("SUBIENDO BORDE")
+
+func mostrar_mensaje():
+	mensaje.visible = true
+
+func ocultar_mensaje():
+	mensaje.visible = false
 
 func _physics_process(delta):
 

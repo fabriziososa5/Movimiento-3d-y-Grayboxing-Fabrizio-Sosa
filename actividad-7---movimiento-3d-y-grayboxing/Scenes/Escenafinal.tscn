@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c76h237mpc5w1"]
+
+[ext_resource type="Texture2D" uid="uid://bqr8634u5mjfo" path="res://Assets/outlast-film-adaptation-in-the-works-from-saw-studio_dyd9.jpg" id="1_0quqs"]
+[ext_resource type="Script" uid="uid://cqw6bcgtuhsnx" path="res://Scripts/escenafinal.gd" id="1_r0qnt"]
+
+[node name="EscenaFinal" type="CanvasLayer" unique_id=806710077]
+script = ExtResource("1_r0qnt")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1066257625]
+offset_right = 1200.0
+offset_bottom = 675.0
+texture = ExtResource("1_0quqs")
+
+[node name="Label" type="Label" parent="." unique_id=921424250]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -11.5
+offset_right = 43.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "ESCAPASTE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=424582310]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.5
+offset_top = 9.5
+offset_right = 267.5
+offset_bottom = 146.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 30
+text = "RECUPERASTE TODAS LAS NOTAS"
+horizontal_alignment = 1
+vertical_alignment = 1
