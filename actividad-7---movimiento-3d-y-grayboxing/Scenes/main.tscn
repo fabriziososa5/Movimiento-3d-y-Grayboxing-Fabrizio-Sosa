@@ -2,8 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://csyfm56s66hfk" path="res://Scenes/escenario.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://24wsis31jvu6" path="res://Scenes/player.tscn" id="2_8gbba"]
+[ext_resource type="Script" uid="uid://dj7k45gbcnis" path="res://Scripts/spot_light_3d.gd" id="3_8gbba"]
 
 [sub_resource type="Environment" id="Environment_7u77a"]
+background_energy_multiplier = 0.25
+ambient_light_energy = 16.0
 
 [node name="Main" type="Node3D" unique_id=330303111]
 
@@ -18,3 +21,73 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0
 
 [node name="Player" parent="." unique_id=646716945 instance=ExtResource("2_8gbba")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.8171024, 1.8502746, 6.241575)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1175234169]
+transform = Transform3D(1, 0, 0, 0, -0.10157719, 0.9948277, 0, -0.9948277, -0.10157719, -1.5389163, 5.066181, -2.9368157)
+light_energy = 16.0
+spot_range = 20.0
+spot_angle = 20.0
+script = ExtResource("3_8gbba")
+energia_normal = 50.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1495247823]
+transform = Transform3D(1, 0, 0, 0, -0.042224403, 0.99910814, 0, -0.99910814, -0.042224403, -1.5389163, 5.066181, -11.951151)
+light_energy = 16.0
+spot_range = 20.0
+spot_angle = 20.0
+script = ExtResource("3_8gbba")
+energia_normal = 50.0
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1284285251]
+transform = Transform3D(1, 0, 0, 0, -0.014956903, 0.9998882, 0, -0.9998882, -0.014956903, -1.5389163, 5.066181, -18.20267)
+light_energy = 16.0
+spot_range = 20.0
+spot_angle = 20.0
+script = ExtResource("3_8gbba")
+energia_normal = 50.0
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=511926690]
+transform = Transform3D(1, 0, 0, 0, -0.00979113, 0.9999521, 0, -0.9999521, -0.009791131, -1.5389163, 5.066181, -25.261206)
+light_energy = 16.0
+spot_range = 20.0
+spot_angle = 20.0
+script = ExtResource("3_8gbba")
+energia_normal = 50.0
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="." unique_id=447619210]
+transform = Transform3D(0.9864579, 0.0016058891, -0.16400683, 0.16401468, -0.009658538, 0.9864106, 0, -0.9999521, -0.00979113, -8.035748, 5.404176, -24.99491)
+light_energy = 16.0
+spot_range = 20.0
+spot_angle = 20.0
+script = ExtResource("3_8gbba")
+energia_normal = 50.0
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="." unique_id=2079022405]
+transform = Transform3D(0.9990509, 0.004352777, -0.043339923, 0.043147177, 0.037431445, 0.9983673, 0.0059679453, -0.99928975, 0.03720811, -13.288255, 5.404176, -25.028471)
+light_energy = 16.0
+spot_range = 20.0
+spot_angle = 20.0
+script = ExtResource("3_8gbba")
+energia_normal = 50.0
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="." unique_id=1857386038]
+transform = Transform3D(1, 0, 0, 0, -0.00979113, 0.9999521, 0, -0.9999521, -0.00979113, 6.4240065, 5.066181, -25.261206)
+light_energy = 16.0
+spot_range = 20.0
+spot_angle = 20.0
+script = ExtResource("3_8gbba")
+energia_normal = 50.0
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="." unique_id=922026390]
+transform = Transform3D(1, 0, 0, 0, -0.00979113, 0.9999521, 0, -0.9999521, -0.00979113, 12.082656, 5.066181, -25.261206)
+light_energy = 16.0
+spot_range = 20.0
+spot_angle = 20.0
+script = ExtResource("3_8gbba")
+energia_normal = 50.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1873223446]
+transform = Transform3D(1, 0, 0, 0, 0.999822, -0.018865889, 0, 0.018865889, 0.999822, 26.854427, 6.8484936, -25.93433)
+light_energy = 7.614
+shadow_enabled = true
+omni_range = 50.167
